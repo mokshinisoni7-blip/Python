@@ -1,0 +1,18 @@
+n=int(input("Enter total number of element:"))
+arr=[]
+for i in range(n):
+    x=int(input("Enter your element:"))
+    arr.append(x)
+print("Array before sorting:")
+print(arr)
+for i in range(n-1):
+    min_index=i
+    for j in range(i+1,n,1):
+        if(arr[i]>arr[j]):
+            min_index=j
+            
+    temp=arr[i]
+    arr[i]=arr[min_index]
+    arr[min_index]=temp
+print("Sorted array is:")
+print(arr)
