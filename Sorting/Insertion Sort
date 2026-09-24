@@ -1,0 +1,15 @@
+n=int(input("Enter no.of elemnt:"))
+arr=[]
+for i in range(n):
+    x=int(input("Enter your element:"))
+    arr.append(x)
+print("Array brfore insertion sort")
+print(arr)
+for i in range(1,n):
+    for j in range(i,0,-1):
+        if(arr[j-1]>arr[j]):
+            temp=arr[j-1]
+            arr[j-1]=arr[j]
+            arr[j]=temp
+print("Array after sort")
+print(arr)
