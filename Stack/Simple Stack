@@ -1,0 +1,40 @@
+x=int(input("Enter your STACK limit:"))
+top=-1
+arr=[]
+def Push(arr,top):
+    if(top==x-1):
+        print("Stack Overflow")
+    else:
+        y=int(input("Enter the element you want to push:"))
+        arr.append(y)
+        top+=1
+        print(top)
+        print(arr)
+        return arr,top
+
+def Pop(arr,top):
+    if(top==-1):
+        print("Stack underflow")
+    else:
+        y=arr.pop(top)
+        top-=1
+        print("Element",y,"is poped")
+        return arr,top
+
+def Display(arr):
+    print(arr)
+
+c="y"
+while(c=="y"or c=="Y"):
+    t=int(input("Enter 1 for push ,2 for pop ,3 for display"))
+    if(t==1):
+        arr,top=Push(arr,top)
+    elif(t==2):
+        arr,top=Pop(arr,top)
+    elif(t==3):
+        Display(arr)
+    else:
+        print("Invalid Choice")
+    c=input("If you want to continue press y or Y")
+
+print("......Code End.....")
