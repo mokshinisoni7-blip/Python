@@ -1,0 +1,8 @@
+x=int(input("Insert your number:"))
+y=x
+sum=0
+while(y!=0):
+    a=y%10
+    sum=(sum*10)+a
+    y=y//10
+print("Reverse of the given number is ",sum)
